@@ -175,6 +175,8 @@ lxc start client
 lxc start metasploitable
 
 apt install git
+apt install pip
+
 pip3 install pyopenssl --upgrade
 pip3 install cryptography pylxd
 pip3 install git+https://github.com/lxc/pylxd
