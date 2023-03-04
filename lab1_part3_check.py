@@ -12,6 +12,7 @@ class TestStringMethods(TestLab1Part2):
         run_command(self.testing, "mitmproxy --mode transparent > log")
         run_command(self.client, "curl http://emaple.com")
         output = run_command(self.testing, "cat log")
+        print(output)
         self.assertTrue("Example Domain" in output)
 
 
