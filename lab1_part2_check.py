@@ -39,7 +39,7 @@ class TestStringMethods(unittest.TestCase):
         print("Testing router configuration")
 
         self.assertTrue(check_ip_connection(self.router, testing_ip_1))
-        self.assertTrue(check_ip_connection(self.router, testing_ip_2))
+        self.assertFalse(check_ip_connection(self.router, testing_ip_2))
         self.assertFalse(check_ip_connection(self.router, metasploitable_ip))
         self.assertFalse(check_ip_connection(self.router, client_ip))
     

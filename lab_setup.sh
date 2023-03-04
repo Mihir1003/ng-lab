@@ -118,6 +118,8 @@ profiles:
                   routes:
                       - to: default
                         via: 192.168.23.102
+                  nameservers:
+                      addresses: [8.8.8.8,8.8.4.4]
   description: Client LXD profile
   devices:
     enp0s8:
@@ -142,6 +144,8 @@ profiles:
                   routes:
                       - to: default
                         via: 192.168.23.102
+                  nameservers:
+                      addresses: [8.8.8.8,8.8.4.4]
   description: Metasploitable LXD profile
   devices:
     eth1:
