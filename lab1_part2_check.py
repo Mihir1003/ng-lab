@@ -5,7 +5,7 @@ import unittest
 
 client = Client()
 
-class TestStringMethods(unittest.TestCase):
+class TestLab1Part2(unittest.TestCase):
 
     def setUp(self) -> None:
         self.container_dict = {}
