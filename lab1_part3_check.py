@@ -7,6 +7,7 @@ client = Client()
 class TestStringMethods(unittest.TestCase):
 
     def setUp(self) -> None:
+        print("starting setup")
         self.container_dict = {}
         for container in client.containers.all():
             self.container_dict[container.name] = container

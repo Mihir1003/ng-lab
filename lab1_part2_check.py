@@ -36,7 +36,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(check_container_ip(self.client, client_ip))
 
     def test_router_connectivity(self):
-        print("Testing router configuration")
+        print("Testing router config uration")
 
         self.assertTrue(check_ip_connection(self.router, testing_ip_1))
         self.assertFalse(check_ip_connection(self.router, testing_ip_2))
