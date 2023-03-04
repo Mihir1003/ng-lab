@@ -50,7 +50,7 @@ def test_icmp(container):
 # test if container is able to use HTTP and HTTPS
 def test_http(container,url="http://www.google.com"):
     print("Testing HTTP")
-    command = "curl -s -o /dev/null -w '%{http_code}'"+ f" {url}"
+    command = "curl "+ f" {url}"
     output = run_command(container, command)
     if output == "200":
         return True
@@ -59,7 +59,7 @@ def test_http(container,url="http://www.google.com"):
     
 def test_https(container,url="https://www.google.com"):
     print("Testing HTTPS")
-    command = "curl -s -o /dev/null -w '%{http_code}' "+ f" {url}"
+    command = "curl "+ f" {url}"
     output = run_command(container, command)
     if output == "200":
         return True
