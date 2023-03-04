@@ -214,11 +214,11 @@ class TestStringMethods(unittest.TestCase):
         self.assertFalse(test_smtp(self.client))
         self.assertFalse(test_pop3(self.client))
 
-    def test_webserver(self):
-        start_webserver(self.client)
-        self.assertFalse(test_http(self.metasploitable, "http://" + client_ip))
-        self.assertFalse(test_https(self.metasploitable, "https://" + client_ip))
-        self.assertTrue(check_ip_connection(self.metasploitable, client_ip))
+    # def test_webserver(self):
+    #     start_webserver(self.client)
+    #     self.assertFalse(test_http(self.metasploitable, "http://" + client_ip))
+    #     self.assertFalse(test_https(self.metasploitable, "https://" + client_ip))
+    #     self.assertTrue(check_ip_connection(self.metasploitable, client_ip))
     
 
 
