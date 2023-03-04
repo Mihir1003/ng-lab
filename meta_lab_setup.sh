@@ -41,4 +41,7 @@ profiles:
       path: /
       pool: default
       type: disk
-  name: default
+  name: default"
+
+echo "$configuration" | lxd init --preseed
+lxc init ubuntu:14.04
