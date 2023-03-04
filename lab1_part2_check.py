@@ -63,3 +63,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(check_ip_connection(self.client, router_ip))
         self.assertTrue(check_ip_connection(self.client, testing_ip_1))
         self.assertTrue(check_ip_connection(self.client, metasploitable_ip))
+
+
+if __name__ == '__main__':
+    unittest.main()
