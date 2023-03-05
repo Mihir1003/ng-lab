@@ -44,4 +44,5 @@ profiles:
   name: default"
 
 echo "$configuration" | lxd init --preseed
-lxc init ubuntu:14.04
+lxc init ubuntu:14.04 meta
+lxc launch meta
