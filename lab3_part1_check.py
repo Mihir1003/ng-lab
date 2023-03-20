@@ -198,7 +198,7 @@ class TestStringMethods(unittest.TestCase):
     def test_client_connectivity(self):
         print("Testing client configuration")
         self.assertTrue(check_ip_connection(self.client, testing_ip_2))
-        self.assertFalse(check_ip_connection(self.client, router_ip))
+        self.assertTrue(check_ip_connection(self.client, router_ip))
         self.assertTrue(check_ip_connection(self.client, testing_ip_1))
         self.assertTrue(check_ip_connection(self.client, metasploitable_ip))
 
