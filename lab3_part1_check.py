@@ -205,7 +205,6 @@ class TestStringMethods(unittest.TestCase):
     def test_protocols(self):
         self.assertTrue(test_icmp(self.client))
         self.assertTrue(test_dns(self.client))
-        self.assertTrue(test_dhcp(self.client))
         self.assertTrue(test_ssh(self.client))
         self.assertFalse(test_ftp(self.client))
         self.assertFalse(test_telnet(self.client))

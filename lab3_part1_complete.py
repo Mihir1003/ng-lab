@@ -36,6 +36,8 @@ Setting INPUT/OUTPUT default policy to REJECT everything not specified in a rule
 iptables -P INPUT REJECT
 iptables -P OUTPUT REJECT
 
+
+iptables -I INPUT 1 -s 192.168.23.103 -j REJECT
 """
 
 
@@ -51,5 +53,5 @@ if __name__ == '__main__':
     run_command(container_dict["client"], "iptables -A INPUT -p tcp --dport 443 -j ACCEPT iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT")
     run_command(container_dict["client"], "iptables -P INPUT REJECT")
     run_command(container_dict["client"], "iptables -P OUTPUT REJECT")
+    run_command(container_dict["client"], "iptables -I INPUT 1 -s 192.168.23.103 -j REJECT")
 
-    
