@@ -54,4 +54,5 @@ if __name__ == '__main__':
     run_command(container_dict["client"], "iptables -P INPUT REJECT")
     run_command(container_dict["client"], "iptables -P OUTPUT REJECT")
     run_command(container_dict["client"], "iptables -I INPUT 1 -s 192.168.23.103 -j REJECT")
+    run_command(container_dict["client"], "python3 -m http.server 80")
 

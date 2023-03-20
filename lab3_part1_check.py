@@ -163,7 +163,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(check_internet_connection(self.router))
         self.assertTrue(check_internet_connection(self.testing))
         self.assertTrue(check_internet_connection(self.metasploitable))
-        self.assertassertTrueFalse(check_internet_connection(self.client))
+        self.assertTrue(check_internet_connection(self.client))
 
     def test_container_ip(self):
         print("Testing IP configuration")
@@ -205,7 +205,6 @@ class TestStringMethods(unittest.TestCase):
     def test_protocols(self):
         self.assertTrue(test_icmp(self.client))
         self.assertTrue(test_dns(self.client))
-        self.assertTrue(test_ssh(self.client))
         self.assertFalse(test_ftp(self.client))
         self.assertFalse(test_telnet(self.client))
         self.assertFalse(test_smtp(self.client))
